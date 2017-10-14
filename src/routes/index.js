@@ -3,6 +3,8 @@ const express = require('express'),
   path = require('path'),
   dataStore = require('../DataStore')
 
-
+router.get('/', (req, res) => {
+  res.render('index')
+})
 
 module.exports = router
