@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\"",
     "startWin": "node_modules\\electron\\dist\\electron main.js",
-    "startNix": "node_modules/electron/dist/electron main.js"
+    "startNix": "node_modules/electron/dist/electron main.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,8 @@
     "jquery": "^3.2.1",
     "popper": "^1.0.0",
     "pug": "^2.0.0-rc.4",
-    "tether": "^1.4.0"
-  }
+    "tether": "^1.4.0",
+    "snyk": "^1.42.7"
+  },
+  "snyk": true
 }
