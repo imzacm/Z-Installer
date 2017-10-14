@@ -8,7 +8,9 @@
     "startWin": "node_modules\\electron\\dist\\electron main.js",
     "startNix": "node_modules/electron/dist/electron main.js",
     "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect",
+    "packageWin": "node_modules\\.bin\\electron-packager . --all",
+    "packageNix": "node_modules/.bin/electron-packager . --all"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,6 @@
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
     "daemonite-material": "^4.0.0-beta",
-    "electron": "^1.7.9",
     "express": "^4.16.2",
     "jquery": "^3.2.1",
     "popper": "^1.0.0",
@@ -31,5 +32,9 @@
     "tether": "^1.4.0",
     "snyk": "^1.42.7"
   },
-  "snyk": true
+  "snyk": true,
+  "devDependencies": {
+    "electron-packager": "^9.1.0",
+    "electron": "^1.7.9"
+  }
 }
