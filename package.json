@@ -4,7 +4,7 @@
   "description": "GUI to install Z software",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "startWin": "node_modules\\electron\\dist\\electron main.js",
     "startNix": "node_modules/electron/dist/electron main.js"
   },
