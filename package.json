@@ -4,7 +4,8 @@
   "description": "GUI to install Z software",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\"",
+    "test": "ELECTRON_PATH=$(pwd)/node_modules/electron/dist/electron CODACY_PROJECT_TOKEN=b1f7532cf1f74bb5967233d3a8ebe2d1 node_modules/.bin/nyc --reporter=lcov --reporter=text-lcov node_modules/.bin/electron-mocha | node_modules/.bin/codacy-coverage",
+    "testWin": "set ELECTRON_PATH=%cd%\\node_modules\\electron\\dist\\electron.exe && node_modules\\.bin\\nyc --reporter=lcov --reporter=text-lcov node_modules\\.bin\\electron-mocha",
     "startWin": "node_modules\\electron\\dist\\electron main.js",
     "startNix": "node_modules/electron/dist/electron main.js",
     "snyk-protect": "snyk protect",
@@ -34,7 +35,12 @@
   },
   "snyk": true,
   "devDependencies": {
+    "chai": "^4.1.2",
+    "codacy-coverage": "^2.0.3",
+    "electron": "^1.7.9",
+    "electron-mocha": "^4.0.3",
     "electron-packager": "^9.1.0",
-    "electron": "^1.7.9"
+    "mockery": "^2.1.0",
+    "nyc": "^11.2.1"
   }
 }
