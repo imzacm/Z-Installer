@@ -1,27 +1,27 @@
 let app = require('electron').app,
-  window = require('electron').BrowserWindow,
-  MainWindow = null,
+  Window = require('electron').BrowserWindow,
+  mainWindow = null,
   server = require('./server')
 
 global.electron = {}
 
-app.on('window-all-closed', () => {
+app.on('Window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
   }
 })
 
 app.on('ready', () => {
-  MainWindow = new window({
+  mainWindow = new Window({
     width: 900,
     height: 600
   })
 
-  MainWindow.loadURL('http://localhost:' + server.config.port)
+  mainWindow.loadURL('http://localhost:' + server.config.port)
 
   global.electron.started = true
 
-  MainWindow.on('closed', () => {
-    MainWindow = null
+  mainWindow.on('closed', () => {
+    mainWindow = null
   })
 })
