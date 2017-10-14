@@ -1,8 +1,8 @@
 language: node_js
 node_js:
-- '6'
-- '7'
-- '8'
+- 'lts/*'
+- 'iojs'
+- 'node'
 cache:
 - apt: true
 - directories:
@@ -20,3 +20,6 @@ install:
 branches:
   only:
   - /.*/
+
+before_script:
+  - npm install
