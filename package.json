@@ -4,7 +4,7 @@
   "description": "GUI to install Z software",
   "main": "main.js",
   "scripts": {
-    "test": "ELECTRON_PATH=$(pwd)/node_modules/electron/dist/electron CODACY_PROJECT_TOKEN=b1f7532cf1f74bb5967233d3a8ebe2d1 node_modules/.bin/nyc --reporter=lcov --reporter=text-lcov node_modules/.bin/electron-mocha | node_modules/.bin/codacy-coverage",
+    "test": "ELECTRON_PATH=$(pwd)/node_modules/electron/dist/electron CODACY_PROJECT_TOKEN=b1f7532cf1f74bb5967233d3a8ebe2d1 $(pwd)/node_modules/.bin/nyc --reporter=lcov --reporter=text-lcov $(pwd)/node_modules/.bin/electron-mocha | $(pwd)/node_modules/.bin/codacy-coverage",
     "testWin": "set ELECTRON_PATH=%cd%\\node_modules\\electron\\dist\\electron.exe && node_modules\\.bin\\nyc --reporter=lcov --reporter=text-lcov node_modules\\.bin\\electron-mocha",
     "startWin": "node_modules\\electron\\dist\\electron main.js",
     "startNix": "node_modules/electron/dist/electron main.js",
