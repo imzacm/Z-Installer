@@ -16,7 +16,7 @@ dataStore.get().updateCat.then(() => {
 })
 
 app.set('view engine', 'pug')
-app.set('views', __dirname + '/src/views')
+app.set('views', path.resolve('.', 'src/views'))
 
 app.use(express.static('./node_modules/daemonite-material/css'))
 app.use(express.static('./node_modules/daemonite-material/js'))
@@ -30,7 +30,7 @@ app.use((req, res, next) => {
   next()
 })
 
-app.use('/', require(__dirname + '/src/routes/index'))
+app.use('/', require(path.resolve('.', 'src/routes/index')))
 
 app.listen(config.port, () => {
   console.log('Listening on ' + config.port)

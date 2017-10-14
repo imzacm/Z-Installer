@@ -1,6 +1,6 @@
 let app = require('electron').app,
   window = require('electron').BrowserWindow,
-  mainWindow = null,
+  MainWindow = null,
   server = require('./server')
 
 app.on('window-all-closed', () => {
@@ -10,14 +10,14 @@ app.on('window-all-closed', () => {
 })
 
 app.on('ready', () => {
-  mainWindow = new window({
+  MainWindow = new window({
     width: 900,
     height: 600
   })
 
-  mainWindow.loadURL('http://localhost:' + server.config.port)
+  MainWindow.loadURL('http://localhost:' + server.config.port)
 
-  mainWindow.on('closed', () => {
-    mainWindow = null
+  MainWindow.on('closed', () => {
+    MainWindow = null
   })
 })
