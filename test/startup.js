@@ -3,12 +3,33 @@ const chai = require('chai'),
   expect = chai.expect,
   path = require('path')
 
+let electronApp
+
+before(() => {
+  electronApp = require('../main.js')
+})
+
 describe('Electron', () => {
-  it('should create an electron object', () => {
-    expect(global.electron).to.be.an('object')
+  describe('should export an object', () => {
+    it('that contains a started property', () => {
+      expect(electronApp).to.have.property('started')
+    })
+
+    it('that contains a closed property', () => {
+      expect(electronApp).to.have.property('closed')
+    })
   })
 
   it('should start', () => {
-    expect(global.electron.started).to.equal(true)
+    return electronApp.started.then((started) => {
+      expect(started).to.equal(true)
+    })
+  })
+
+  it('should close', () => {
+    app.exit()
+    return electronApp.closed.then((closed) => {
+      expect(closed).to.equal(true)
+    })
   })
 })

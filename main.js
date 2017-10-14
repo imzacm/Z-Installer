@@ -1,9 +1,20 @@
-let app = require('electron').app,
-  Window = require('electron').BrowserWindow,
+global.app = require('electron').app
+
+let Window = require('electron').BrowserWindow,
   mainWindow = null,
   server = require('./server')
 
-global.electron = {}
+let self = this
+self.startedPromise = () => {
+  return new Promise((resolve, reject) => {
+    self.startedRes = resolve
+  })
+}
+self.closedPromise = () => {
+  return new Promise((resolve, reject) => {
+    self.closedRes = resolve
+  })
+}
 
 app.on('Window-all-closed', () => {
   if (process.platform !== 'darwin') {
@@ -19,9 +30,17 @@ app.on('ready', () => {
 
   mainWindow.loadURL('http://localhost:' + server.config.port)
 
-  global.electron.started = true
+  self.startedRes()
 
   mainWindow.on('closed', () => {
     mainWindow = null
+    self.closedRes()
   })
 })
+
+module.exports = {
+  started: self.startedPromise().then(() => {return true}),
+  closed: self.closedPromise().then(() => {
+    return true
+  })
+}
