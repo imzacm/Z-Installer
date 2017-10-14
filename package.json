@@ -4,7 +4,9 @@
   "description": "GUI to install Z software",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startWin": "node_modules\\electron\\dist\\electron main.js",
+    "startNix": "node_modules/electron/dist/electron main.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/imzacm/Z-Installer/issues"
   },
-  "homepage": "https://github.com/imzacm/Z-Installer#readme"
+  "homepage": "https://github.com/imzacm/Z-Installer#readme",
+  "dependencies": {
+    "electron": "^1.7.9",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  }
 }
