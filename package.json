@@ -8,8 +8,6 @@
     "testWin": "set ELECTRON_PATH=%cd%\\node_modules\\electron\\dist\\electron.exe && node_modules\\.bin\\nyc --reporter=lcov --reporter=text-lcov node_modules\\.bin\\electron-mocha",
     "startWin": "node_modules\\electron\\dist\\electron main.js",
     "startNix": "node_modules/electron/dist/electron main.js",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect",
     "packageWin": "node_modules\\.bin\\electron-packager . --all",
     "packageNix": "node_modules/.bin/electron-packager . --all"
   },
