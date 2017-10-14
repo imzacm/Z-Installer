@@ -4,8 +4,8 @@
   "description": "GUI to install Z software",
   "main": "main.js",
   "scripts": {
-    "test": "ELECTRON_PATH=$(pwd)/node_modules/electron/dist/electron CODACY_PROJECT_TOKEN=b1f7532cf1f74bb5967233d3a8ebe2d1 $(pwd)/node_modules/.bin/nyc --reporter=lcov --reporter=text-lcov $(pwd)/node_modules/.bin/electron-mocha | $(pwd)/node_modules/.bin/codacy-coverage",
-    "testWin": "set ELECTRON_PATH=%cd%\\node_modules\\electron\\dist\\electron.exe && node_modules\\.bin\\nyc --reporter=lcov --reporter=text-lcov node_modules\\.bin\\electron-mocha",
+    "test": "ELECTRON_PATH=$(pwd)/node_modules/electron/dist/electron $(pwd)/node_modules/.bin/nyc $(pwd)/node_modules/.bin/electron-mocha --require-main main.js",
+    "testWin": "set ELECTRON_PATH=%cd%\\node_modules\\electron\\dist\\electron.exe && node_modules\\.bin\\nyc node_modules\\.bin\\electron-mocha --require-main main.js",
     "startWin": "node_modules\\electron\\dist\\electron main.js",
     "startNix": "node_modules/electron/dist/electron main.js",
     "packageWin": "node_modules\\.bin\\electron-packager . --all",
@@ -24,12 +24,13 @@
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
     "daemonite-material": "^4.0.0-beta",
+    "detect-mocha": "^0.1.0",
     "express": "^4.16.2",
     "jquery": "^3.2.1",
     "popper": "^1.0.0",
     "pug": "^2.0.0-rc.4",
-    "tether": "^1.4.0",
-    "snyk": "^1.42.7"
+    "snyk": "^1.42.7",
+    "tether": "^1.4.0"
   },
   "snyk": true,
   "devDependencies": {

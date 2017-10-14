@@ -3,6 +3,8 @@ let app = require('electron').app,
   MainWindow = null,
   server = require('./server')
 
+global.electron = {}
+
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
@@ -16,6 +18,8 @@ app.on('ready', () => {
   })
 
   MainWindow.loadURL('http://localhost:' + server.config.port)
+
+  global.electron.started = true
 
   MainWindow.on('closed', () => {
     MainWindow = null
