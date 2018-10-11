@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.12.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:tunnel-agent:20170305':
@@ -11,6 +11,10 @@ patch:
   'npm:debug:20170905':
     - electron > extract-zip > debug:
         patched: '2017-10-14T15:36:59.616Z'
+    - popper > rijs > rijs.sync > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2018-10-11T05:21:57.510Z'
   'npm:ms:20170412':
     - electron > extract-zip > debug > ms:
         patched: '2017-10-14T15:36:59.616Z'
+    - popper > rijs > rijs.sync > socket.io > socket.io-adapter > socket.io-parser > debug > ms:
+        patched: '2018-10-11T05:21:57.510Z'

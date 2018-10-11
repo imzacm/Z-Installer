@@ -10,7 +10,9 @@
   "scripts": {
     "test": "node_modules/.bin/cross-env NODE_ENV=test ELECTRON_PATH=./node_modules/electron/dist/electron ./node_modules/.bin/electron-mocha --timeout 10000",
     "start": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/electron/dist/electron main.js",
-    "package": "./node_modules/.bin/cross-env node_modules/.bin/electron-packager . --all"
+    "package": "./node_modules/.bin/cross-env node_modules/.bin/electron-packager . --all",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -23,14 +25,14 @@
   },
   "homepage": "https://github.com/imzacm/Z-Installer#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
+    "bootstrap": "^4.0.0",
     "daemonite-material": "^4.0.0-beta",
     "detect-mocha": "^0.1.0",
     "express": "^4.16.2",
     "jquery": "^3.2.1",
     "popper": "^1.0.0",
-    "pug": "^2.0.0-rc.4",
-    "snyk": "^1.42.7",
+    "pug": "^2.0.0",
+    "snyk": "^1.103.1",
     "tether": "^1.4.0"
   },
   "snyk": true,
