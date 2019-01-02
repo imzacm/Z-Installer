@@ -36,7 +36,7 @@
   "snyk": true,
   "devDependencies": {
     "chai": "^4.1.2",
-    "codacy-coverage": "^2.0.3",
+    "codacy-coverage": "^3.4.0",
     "cross-env": "^5.0.5",
     "electron": "^1.7.9",
     "electron-mocha": "^4.0.3",
