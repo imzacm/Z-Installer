@@ -10,7 +10,9 @@
   "scripts": {
     "test": "node_modules/.bin/cross-env NODE_ENV=test ELECTRON_PATH=./node_modules/electron/dist/electron ./node_modules/.bin/electron-mocha --timeout 10000",
     "start": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/electron/dist/electron main.js",
-    "package": "./node_modules/.bin/cross-env node_modules/.bin/electron-packager . --all"
+    "package": "./node_modules/.bin/cross-env node_modules/.bin/electron-packager . --all",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -30,7 +32,7 @@
     "jquery": "^3.2.1",
     "popper": "^1.0.0",
     "pug": "^2.0.0-rc.4",
-    "snyk": "^1.42.7",
+    "snyk": "^1.123.0",
     "tether": "^1.4.0"
   },
   "snyk": true,
