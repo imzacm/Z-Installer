@@ -31,7 +31,7 @@
     "popper": "^1.0.0",
     "pug": "^2.0.0-rc.4",
     "snyk": "^1.42.7",
-    "tether": "^1.4.0"
+    "tether": "^1.4.7"
   },
   "snyk": true,
   "devDependencies": {
