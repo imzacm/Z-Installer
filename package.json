@@ -38,7 +38,7 @@
     "chai": "^4.1.2",
     "codacy-coverage": "^2.0.3",
     "cross-env": "^5.0.5",
-    "electron": "^1.7.9",
+    "electron": "^6.0.5",
     "electron-mocha": "^4.0.3",
     "electron-packager": "^9.1.0",
     "mockery": "^2.1.0"
