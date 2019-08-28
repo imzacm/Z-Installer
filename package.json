@@ -40,7 +40,7 @@
     "cross-env": "^5.0.5",
     "electron": "^1.7.9",
     "electron-mocha": "^4.0.3",
-    "electron-packager": "^9.1.0",
+    "electron-packager": "^14.0.5",
     "mockery": "^2.1.0"
   }
 }
