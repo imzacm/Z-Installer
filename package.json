@@ -37,7 +37,7 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "codacy-coverage": "^2.0.3",
-    "cross-env": "^5.0.5",
+    "cross-env": "^7.0.1",
     "electron": "^1.7.9",
     "electron-mocha": "^4.0.3",
     "electron-packager": "^9.1.0",
