@@ -27,7 +27,7 @@
     "daemonite-material": "^4.0.0-beta",
     "detect-mocha": "^0.1.0",
     "express": "^4.16.2",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "popper": "^1.0.0",
     "pug": "^2.0.0-rc.4",
     "snyk": "^1.42.7",
