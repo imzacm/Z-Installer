@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.25.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:tunnel-agent:20170305':
@@ -14,3 +14,13 @@ patch:
   'npm:ms:20170412':
     - electron > extract-zip > debug > ms:
         patched: '2017-10-14T15:36:59.616Z'
+  'npm:qs:20170213':
+    - popper > wd > request > qs:
+        patched: '2026-01-19T10:50:37.184Z'
+        id: 'npm:qs:20170213'
+        path: popper > wd > request > qs
+  'npm:tough-cookie:20170905':
+    - popper > wd > request > tough-cookie:
+        patched: '2026-01-19T10:50:37.184Z'
+        id: 'npm:tough-cookie:20170905'
+        path: popper > wd > request > tough-cookie
